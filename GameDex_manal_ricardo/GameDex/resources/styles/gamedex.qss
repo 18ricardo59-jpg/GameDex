@@ -1,0 +1,280 @@
+/* ==========================================================
+   GAMEDEX - Tema visual (consola portatil)
+   Colores:
+     Tinta     #161A33   barra lateral, textos
+     Tinta 2   #232850   hover de la barra lateral
+     Papel     #F2F3F8   fondo del contenido
+     Linea     #DDE0EE   bordes suaves
+     Borde     #C9CDE4   bordes de campos
+     Apagado   #5A5F7D   texto secundario
+     Cartucho  #FFC83D   accion principal
+     Foco      #4452D8   anillo de foco
+   {{RECURSOS}} lo sustituye main.py por la ruta real.
+   ========================================================== */
+
+QWidget {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    color: #161A33;
+}
+
+QLabel { background: transparent; }
+
+/* ---------- Ventana ---------- */
+QMainWindow, QWidget#centralwidget { background-color: #F2F3F8; }
+
+QMenuBar { background-color: #161A33; color: #FFFFFF; padding: 2px 6px; }
+QMenuBar::item { background: transparent; padding: 6px 12px; border-radius: 6px; }
+QMenuBar::item:selected { background-color: #232850; }
+QMenu { background-color: #FFFFFF; color: #161A33; border: 1px solid #DDE0EE; padding: 6px; }
+QMenu::item { padding: 7px 24px; border-radius: 6px; }
+QMenu::item:selected { background-color: #E6E9F8; }
+QMenu::separator { height: 1px; background: #DDE0EE; margin: 6px 4px; }
+
+QStatusBar { background-color: #E6E9F4; color: #3B4060; }
+QStatusBar::item { border: none; }
+
+/* ---------- Barra lateral ---------- */
+QFrame#panelLateral { background-color: #161A33; border: none; }
+
+QLabel#lblLogo {
+    color: #FFFFFF;
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 28px 24px 24px 24px;
+}
+
+QPushButton#btnInicio, QPushButton#btnBiblioteca {
+    background-color: transparent;
+    color: #C9CCE6;
+    text-align: left;
+    padding: 13px 20px;
+    border: none;
+    border-left: 4px solid transparent;
+    border-radius: 0px;
+    font-size: 14px;
+}
+QPushButton#btnInicio:hover, QPushButton#btnBiblioteca:hover {
+    background-color: #232850;
+    color: #FFFFFF;
+}
+QPushButton#btnInicio:checked, QPushButton#btnBiblioteca:checked {
+    background-color: #232850;
+    color: #FFC83D;
+    border-left: 4px solid #FFC83D;
+    font-weight: 600;
+}
+QPushButton#btnInicio:focus, QPushButton#btnBiblioteca:focus {
+    border-left: 4px solid #FFFFFF;
+}
+
+QPushButton#btnAnadir {
+    background-color: #FFC83D;
+    color: #161A33;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 8px 16px 4px 16px;
+    font-size: 14px;
+    font-weight: 700;
+}
+QPushButton#btnAnadir:hover { background-color: #FFB800; }
+QPushButton#btnAnadir:pressed { background-color: #E5A500; }
+QPushButton#btnAnadir:focus { border: 2px solid #FFFFFF; }
+
+QPushButton#btnSalir {
+    background-color: transparent;
+    color: #C9CCE6;
+    border: 1px solid #3A4070;
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin: 4px 16px 8px 16px;
+}
+QPushButton#btnSalir:hover { background-color: #232850; color: #FFFFFF; }
+QPushButton#btnSalir:focus { border: 2px solid #FFFFFF; }
+
+/* ---------- Contenido ---------- */
+QStackedWidget#contenidoPrincipal,
+QWidget#pageInicio,
+QWidget#pageBiblioteca { background-color: #F2F3F8; }
+
+QLabel#lblTituloInicio, QLabel#lblTituloBiblioteca {
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #161A33;
+}
+QLabel#lblSubtituloInicio { font-size: 15px; color: #5A5F7D; }
+QLabel#lblContador { font-size: 14px; color: #5A5F7D; }
+
+QLabel#lblTituloRecientes {
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+QLabel#lblRecientes { font-size: 14px; color: #3B4060; line-height: 150%; }
+
+/* Tarjetas de estadisticas del inicio */
+QFrame#statTileTotal, QFrame#statTileMedia, QFrame#statTilePlataforma {
+    background-color: #FFFFFF;
+    border: 1px solid #DDE0EE;
+    border-radius: 12px;
+}
+QLabel#lblStatTotal, QLabel#lblStatMedia, QLabel#lblStatPlataforma {
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #161A33;
+}
+QLabel#lblCaptionTotal, QLabel#lblCaptionMedia, QLabel#lblCaptionPlataforma { font-size: 12px; color: #5A5F7D; }
+
+/* ---------- Botones generales ---------- */
+QPushButton {
+    background-color: #FFFFFF;
+    color: #161A33;
+    border: 1px solid #C9CDE4;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+QPushButton:hover { background-color: #EEF0FB; }
+QPushButton:pressed { background-color: #E0E4F7; }
+QPushButton:focus { border: 2px solid #4452D8; }
+QPushButton:disabled { color: #9A9EB8; background-color: #F2F3F8; }
+
+/* Accion principal */
+QPushButton#btnIrBiblioteca, QPushButton#btnGuardar {
+    background-color: #FFC83D;
+    color: #161A33;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+}
+QPushButton#btnIrBiblioteca:hover, QPushButton#btnGuardar:hover { background-color: #FFB800; }
+QPushButton#btnIrBiblioteca:pressed, QPushButton#btnGuardar:pressed { background-color: #E5A500; }
+QPushButton#btnIrBiblioteca:focus, QPushButton#btnGuardar:focus { border: 2px solid #4452D8; }
+
+QPushButton#btnNuevoJuego { padding: 10px 18px; }
+QPushButton#btnCancelar { padding: 12px 22px; }
+
+/* ---------- Campos de texto y desplegables ---------- */
+QLineEdit, QComboBox, QSpinBox {
+    background-color: #FFFFFF;
+    color: #161A33;
+    border: 1px solid #C9CDE4;
+    border-radius: 8px;
+    padding: 9px 12px;
+    selection-background-color: #4452D8;
+    selection-color: #FFFFFF;
+}
+QLineEdit:hover, QComboBox:hover, QSpinBox:hover { border: 1px solid #8C93C4; }
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 2px solid #4452D8;
+    padding: 8px 11px;
+}
+
+QComboBox::drop-down { border: none; width: 30px; }
+QComboBox::down-arrow {
+    image: url({{RECURSOS}}/icons/chevron-down.png);
+    width: 12px; height: 12px;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #161A33;
+    border: 1px solid #C9CDE4;
+    selection-background-color: #E6E9F8;
+    selection-color: #161A33;
+    outline: 0;
+    padding: 4px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 24px;
+    border: none;
+    background: transparent;
+}
+QSpinBox::up-arrow {
+    image: url({{RECURSOS}}/icons/chevron-up.png);
+    width: 10px; height: 10px;
+}
+QSpinBox::down-arrow {
+    image: url({{RECURSOS}}/icons/chevron-down.png);
+    width: 10px; height: 10px;
+}
+
+/* ---------- Scroll ---------- */
+QScrollArea#scrollArea { background: transparent; border: none; }
+QScrollArea#scrollArea QWidget#qt_scrollarea_viewport { background: transparent; }
+
+QScrollBar:vertical { background: transparent; width: 12px; margin: 2px; }
+QScrollBar::handle:vertical { background: #BFC4DE; border-radius: 4px; min-height: 36px; }
+QScrollBar::handle:vertical:hover { background: #9AA1C8; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: transparent; }
+
+QLabel#lblVacio { font-size: 15px; color: #5A5F7D; padding: 24px; }
+
+/* ---------- Tarjeta de videojuego ---------- */
+QWidget#GameCard {
+    background-color: #FFFFFF;
+    border: 1px solid #DDE0EE;
+    border-radius: 12px;
+}
+QLabel#cardInicial {
+    color: #FFFFFF;
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+QLabel#cardPlataforma { color: #FFFFFF; font-size: 12px; font-weight: 700; }
+QLabel#cardTitulo {
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #161A33;
+}
+QLabel#cardChip {
+    background-color: #E6E9F8;
+    color: #2F3A8F;
+    border-radius: 9px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+QLabel#cardAnio { color: #5A5F7D; font-size: 12px; }
+QLabel#cardEstrellas { color: #B36B00; font-size: 14px; font-weight: 600; }
+
+QPushButton#btnEditarCard { padding: 6px 10px; font-size: 12px; }
+QPushButton#btnEliminarCard {
+    color: #B42318;
+    border: 1px solid #F0C4C0;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+QPushButton#btnEliminarCard:hover { background-color: #FDECEA; }
+QPushButton#btnEliminarCard:focus { border: 2px solid #4452D8; }
+
+/* ---------- Formulario ---------- */
+QDialog#Dialog { background-color: #FFFFFF; }
+QDialog#Dialog QLabel { font-weight: 600; font-size: 13px; }
+QLabel#lblTituloForm {
+    font-family: "Bahnschrift", "Segoe UI", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+QLabel#lblSubtituloForm { font-weight: 400; font-size: 13px; color: #5A5F7D; }
+
+/* ---------- Cuadros de mensaje ---------- */
+QMessageBox { background-color: #FFFFFF; }
+QMessageBox QLabel { color: #161A33; font-size: 13px; font-weight: 400; }
+QMessageBox QPushButton { min-width: 90px; }
+
+QToolTip {
+    background-color: #161A33;
+    color: #FFFFFF;
+    border: none;
+    padding: 6px 8px;
+}

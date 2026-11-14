@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1100</width><height>700</height></rect></property>
+  <property name="minimumSize"><size><width>900</width><height>600</height></size></property>
+  <property name="windowTitle"><string>GameDex</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="layoutCentral">
+    <property name="spacing"><number>0</number></property>
+    <property name="leftMargin"><number>0</number></property>
+    <property name="topMargin"><number>0</number></property>
+    <property name="rightMargin"><number>0</number></property>
+    <property name="bottomMargin"><number>0</number></property>
+    <item>
+     <widget class="QFrame" name="panelLateral">
+      <property name="minimumSize"><size><width>230</width><height>0</height></size></property>
+      <property name="maximumSize"><size><width>230</width><height>16777215</height></size></property>
+      <layout class="QVBoxLayout" name="layoutLateral">
+       <property name="spacing"><number>2</number></property>
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>12</number></property>
+       <item>
+        <widget class="QLabel" name="lblLogo">
+         <property name="text"><string>GameDex</string></property>
+        </widget>
+       </item>
+       <item><widget class="QPushButton" name="btnInicio">
+ <property name="text"><string>Inicio</string></property>
+ <property name="checkable"><bool>true</bool></property>
+</widget></item>
+       <item><widget class="QPushButton" name="btnBiblioteca">
+ <property name="text"><string>Biblioteca</string></property>
+ <property name="checkable"><bool>true</bool></property>
+</widget></item>
+       <item>
+        <spacer name="spacerLateral">
+         <property name="orientation"><enum>Qt::Vertical</enum></property>
+         <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+        </spacer>
+       </item>
+       <item><widget class="QPushButton" name="btnAnadir">
+ <property name="text"><string>Añadir videojuego</string></property>
+</widget></item>
+       <item><widget class="QPushButton" name="btnSalir">
+ <property name="text"><string>Salir</string></property>
+</widget></item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="contenidoPrincipal">
+      <property name="currentIndex"><number>0</number></property>
+      <widget class="QWidget" name="pageInicio">
+       <layout class="QVBoxLayout" name="layoutInicio">
+        <property name="spacing"><number>14</number></property>
+        <property name="leftMargin"><number>40</number></property>
+        <property name="topMargin"><number>36</number></property>
+        <property name="rightMargin"><number>40</number></property>
+        <property name="bottomMargin"><number>30</number></property>
+        <item>
+         <widget class="QLabel" name="lblTituloInicio">
+          <property name="text"><string>Bienvenido a GameDex</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblSubtituloInicio">
+          <property name="text"><string>Tu biblioteca personal de videojuegos</string></property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutStats">
+          <property name="spacing"><number>16</number></property>
+        <item>
+         <widget class="QFrame" name="statTileTotal">
+          <property name="minimumSize"><size><width>190</width><height>96</height></size></property>
+          <layout class="QVBoxLayout" name="layoutTileTotal">
+           <property name="spacing"><number>2</number></property>
+           <property name="leftMargin"><number>18</number></property>
+           <property name="topMargin"><number>14</number></property>
+           <property name="rightMargin"><number>18</number></property>
+           <property name="bottomMargin"><number>14</number></property>
+           <item>
+            <widget class="QLabel" name="lblStatTotal">
+             <property name="text"><string>0</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblCaptionTotal">
+             <property name="text"><string>Videojuegos en tu biblioteca</string></property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="statTileMedia">
+          <property name="minimumSize"><size><width>190</width><height>96</height></size></property>
+          <layout class="QVBoxLayout" name="layoutTileMedia">
+           <property name="spacing"><number>2</number></property>
+           <property name="leftMargin"><number>18</number></property>
+           <property name="topMargin"><number>14</number></property>
+           <property name="rightMargin"><number>18</number></property>
+           <property name="bottomMargin"><number>14</number></property>
+           <item>
+            <widget class="QLabel" name="lblStatMedia">
+             <property name="text"><string>0</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblCaptionMedia">
+             <property name="text"><string>Puntuación media</string></property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="statTilePlataforma">
+          <property name="minimumSize"><size><width>190</width><height>96</height></size></property>
+          <layout class="QVBoxLayout" name="layoutTilePlataforma">
+           <property name="spacing"><number>2</number></property>
+           <property name="leftMargin"><number>18</number></property>
+           <property name="topMargin"><number>14</number></property>
+           <property name="rightMargin"><number>18</number></property>
+           <property name="bottomMargin"><number>14</number></property>
+           <item>
+            <widget class="QLabel" name="lblStatPlataforma">
+             <property name="text"><string>0</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblCaptionPlataforma">
+             <property name="text"><string>Plataforma más usada</string></property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblTituloRecientes">
+          <property name="text"><string>Añadidos recientemente</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblRecientes">
+          <property name="text"><string>Todavía no has añadido ningún videojuego.</string></property>
+          <property name="alignment"><set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set></property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutAccionInicio">
+          <item><widget class="QPushButton" name="btnIrBiblioteca">
+ <property name="text"><string>Ver mi biblioteca</string></property>
+</widget></item>
+          <item>
+           <spacer name="spacerAccionInicio">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="spacerInicio">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint" stdset="0"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageBiblioteca">
+       <layout class="QVBoxLayout" name="layoutBiblioteca">
+        <property name="spacing"><number>14</number></property>
+        <property name="leftMargin"><number>40</number></property>
+        <property name="topMargin"><number>36</number></property>
+        <property name="rightMargin"><number>30</number></property>
+        <property name="bottomMargin"><number>16</number></property>
+        <item>
+         <layout class="QHBoxLayout" name="layoutCabecera">
+          <item>
+           <widget class="QLabel" name="lblTituloBiblioteca">
+            <property name="text"><string>Mi biblioteca</string></property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerCabecera">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblContador">
+            <property name="text"><string>0 videojuegos</string></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutFiltros">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <widget class="QLineEdit" name="textBuscar">
+            <property name="minimumSize"><size><width>220</width><height>40</height></size></property>
+            <property name="clearButtonEnabled"><bool>true</bool></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cmbGenero">
+            <property name="minimumSize"><size><width>170</width><height>40</height></size></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cmbPlataforma">
+            <property name="minimumSize"><size><width>190</width><height>40</height></size></property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnNuevoJuego">
+            <property name="minimumSize"><size><width>130</width><height>40</height></size></property>
+            <property name="text"><string>Limpiar filtros</string></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+          <property name="widgetResizable"><bool>true</bool></property>
+          <widget class="QWidget" name="contenedorTarjetas">
+           <property name="geometry"><rect><x>0</x><y>0</y><width>800</width><height>400</height></rect></property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>btnInicio</tabstop>
+  <tabstop>btnBiblioteca</tabstop>
+  <tabstop>btnAnadir</tabstop>
+  <tabstop>btnSalir</tabstop>
+  <tabstop>textBuscar</tabstop>
+  <tabstop>cmbGenero</tabstop>
+  <tabstop>cmbPlataforma</tabstop>
+  <tabstop>btnNuevoJuego</tabstop>
+  <tabstop>btnIrBiblioteca</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
