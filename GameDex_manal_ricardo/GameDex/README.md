@@ -29,7 +29,7 @@ Este proyecto ha sido diseñado aplicando principios avanzados de **Diseño de I
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 | Tecnología / Herramienta | Propósito en el proyecto |
 | :--- | :--- |
